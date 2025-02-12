@@ -23,11 +23,11 @@ my-vue-app
 ## Setup Instructions
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/diogoFritz/vue-portefolio
    ```
 2. Navigate to the project directory:
    ```
-   cd my-vue-app
+   cd vue-portefolio
    ```
 3. Install dependencies:
    ```
