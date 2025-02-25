@@ -1,9 +1,7 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '../components/Home.vue';
+import About from '../components/About.vue';
 import RandomPictures from '../components/RandomPictures.vue';
-
-Vue.use(VueRouter);
 
 const routes = [
   {
@@ -12,15 +10,19 @@ const routes = [
     component: Home
   },
   {
+    path: '/about',
+    name: 'About',
+    component: About
+  },
+  {
     path: '/random-pictures',
     name: 'RandomPictures',
     component: RandomPictures
   }
 ];
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
   routes
 });
 

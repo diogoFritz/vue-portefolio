@@ -1,47 +1,37 @@
 <template>
-  <div class="random-pictures">
-    <h2>Random Pictures</h2>
-    <div v-for="(photo, index) in photos" :key="index" class="photo">
-      <img :src="photo.url" :alt="'Random Photo ' + (index + 1)" />
-    </div>
+  <div id="app">
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/random-pictures">Portefolio</router-link>
+    </nav>
+    <router-view/>
   </div>
 </template>
 
 <script>
+
+
 export default {
-  name: 'RandomPictures',
-  data() {
-    return {
-      photos: []
-    };
-  },
-  created() {
-    this.fetchRandomPhotos();
-  },
-  methods: {
-    fetchRandomPhotos() {
-      const randomPhotos = [];
-      for (let i = 0; i < 10; i++) {
-        randomPhotos.push({
-          url: `https://picsum.photos/200/300?random=${i + 1}`
-        });
-      }
-      this.photos = randomPhotos;
-    }
-  }
+  name: 'App'
 };
 </script>
 
-<style scoped>
-.random-pictures {
+<style>
+nav {
   display: flex;
-  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
 }
-.photo {
-  margin: 10px;
+
+nav a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
 }
-.photo img {
-  max-width: 100%;
-  height: auto;
+
+nav a:hover {
+  text-decoration: underline;
 }
 </style>
