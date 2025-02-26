@@ -2,16 +2,24 @@
   <div class="random-pictures">
     <h2>Random Pictures</h2>
     <div class="photos-container">
-      <div v-for="(photo, index) in photos" :key="index" class="photo">
-        <img :src="photo.url" :alt="'Random Photo ' + (index + 1)" />
-      </div>
+      <PictureFrame
+        v-for="(photo, index) in photos"
+        :key="index"
+        :name="'Random Photo ' + (index + 1)"
+        :photoUrl="photo.url"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import PictureFrame from './PictureFrame.vue';
+
 export default {
   name: 'RandomPictures',
+  components: {
+    PictureFrame
+  },
   data() {
     return {
       photos: []
@@ -46,14 +54,5 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
-}
-
-.photo {
-  margin: 10px;
-}
-
-.photo img {
-  max-width: 100%;
-  height: auto;
 }
 </style>
