@@ -4,7 +4,7 @@ import About from '../components/About.vue';
 import RandomPictures from '../components/RandomPictures.vue';
 import Form from '../components/Form.vue';
 import Frame from '../components/PictureFrame.vue';
-import Galery from '../components/Galery.vue';
+import Gallery from '../components/Gallery.vue';
 
 const routes = [
   {
@@ -28,9 +28,9 @@ const routes = [
     component: Form
   },
   {
-    path: '/photo-gallery',
-    name: 'Galery',
-    component: Galery
+    path: '/photo-galery',
+    name: 'Gallery',
+    component: Gallery
   },
   
 ];

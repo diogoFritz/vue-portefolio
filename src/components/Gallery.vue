@@ -17,10 +17,13 @@
     components: { PhotoCard },
     data() {
       return {
+        // Melhorar o acesso às fotos unsplash, construir API deles, incorporar a API no codigo. 
         photos: [
-          { src: "https://source.unsplash.com/300x300/?nature", alt: "Nature", title: "Beautiful Nature" },
+          { src: "https://unsplash.com/photos/a-group-of-people-riding-horses-through-a-dry-grass-field-Kbk99bvgaAc", alt: "Nature", title: "Beautiful Nature" },
           { src: "https://source.unsplash.com/300x300/?city", alt: "City", title: "Cityscape" },
           { src: "https://source.unsplash.com/300x300/?portrait", alt: "Portrait", title: "Portrait Shot" },
+          { src: "https://source.unsplash.com/300x300/?portrait", alt: "Portrait", title: "Portrait Shot" },
+          { src: "https://source.unsplash.com/300x300/?landscape", alt: "Landscape", title: "Walking up this morning" },
         ],
       };
     },
